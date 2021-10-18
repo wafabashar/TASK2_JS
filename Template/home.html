@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="Styles.css" rel="stylesheet" />
+
+        <script type="text/javascript">
+
+    
+      
+
+         function hello(){
+
+             debugger;
+            var x=localStorage.getItem("Info");
+            document.getElementById("username").innerHTML ="Hello " + x;
+            
+         }
+
+
+          function shopping_list(x){
+               debugger;
+
+
+            var chek=document.getElementById("tableItems");
+            var chek3=chek.getElementsByTagName("input");
+
+            if(x.checked==true){
+
+             for(var i=0;i<chek3.length;i++){
+             chek3[i].checked=true;
+   
+             }
+             }
+
+            else{
+
+           for(var i=0;i<chek3.length;i++){
+               chek3[i].checked=false;
+
+                }
+              }    
+
+        }
+
+
+        function discount(x){
+
+            debugger;
+            
+
+           var dis= document.getElementById("DiscountPart");
+
+            if(x.checked==true){
+
+                dis.style.display="block";
+                
+
+                    }
+            else{
+
+              dis.style.display="none";
+              
+                
+            }
+        }
+
+        function buyover(){
+            
+
+            var dis=document.getElementById("DiscountPart");
+            var inp=dis.getElementsByTagName("input");
+            inp[1].setAttribute("class","mybutton")
+            
+        }
+
+        
+
+
+        function delete_checked(){
+            debugger;
+
+            var in_div=document.getElementById("tableItems");
+            var row2=in_div.getElementsByTagName("input");
+
+            for(var i=0;i<row2.length;i++)
+            {
+                if(row2[i].checked==true){
+                   
+                   var table= row2[i].parentNode.parentNode.parentNode; 
+                   var deleted= row2[i].parentNode.parentNode; 
+                
+                  table.removeChild(deleted);
+                  i--;
+
+                 
+                }
+                 if(row2.length==0){
+                    var shoping_list=document.getElementById("DivShoppingList");
+                    shoping_list.setAttribute("class","hideBox");
+
+                }
+            }
+
+          
+
+        }
+
+        function home(){
+            debugger;
+
+          var home=document.getElementsByClassName("HeaderMenu");
+          var det=home[0].getElementsByTagName("li");
+
+          var shoping_list=document.getElementById("DivShoppingList");
+          shoping_list.setAttribute("class","hideBox");
+      
+
+          for(var i=0;i<det.length;i++){
+
+            if(i==0)
+            {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+            }
+            else{
+
+                det[i].removeAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].removeAttribute("style","color");
+
+
+            }
+          }
+          
+
+        }
+
+        function top_sales(){
+            debugger;
+
+
+          var home=document.getElementsByClassName("HeaderMenu");
+          var det=home[0].getElementsByTagName("li");
+
+          var shoping_list=document.getElementById("DivShoppingList");
+          shoping_list.setAttribute("class","hideBox");
+
+          for(var i=0;i<det.length;i++){
+
+                if(i==1)
+                 {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+                 }
+                else{
+
+                 det[i].removeAttribute("class","liClick");
+                 var a=det[i].getElementsByTagName("a");
+                 a[0].removeAttribute("style","color");
+
+
+                  }
+                    }
+
+        
+        }
+
+        function week_offers(){
+
+            debugger;
+
+            var home=document.getElementsByClassName("HeaderMenu");
+            var det=home[0].getElementsByTagName("li");
+
+             var shoping_list=document.getElementById("DivShoppingList");
+             shoping_list.setAttribute("class","hideBox");
+
+            for(var i=0;i<det.length;i++){
+
+                if(i==2)
+                 {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+                 }
+                else{
+
+                 det[i].removeAttribute("class","liClick");
+                 var a=det[i].getElementsByTagName("a");
+                 a[0].removeAttribute("style","color");
+
+
+                  }
+                    }
+
+        }
+
+        function shope(){
+
+            debugger;
+
+            var home=document.getElementsByClassName("HeaderMenu");
+            var det=home[0].getElementsByTagName("li");
+
+           var shoping_list=document.getElementById("DivShoppingList");
+           shoping_list.setAttribute("class","hideBox");
+
+           for(var i=0;i<det.length;i++){
+
+                if(i==3)
+                 {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+                 }
+                else{
+
+                 det[i].removeAttribute("class","liClick");
+                 var a=det[i].getElementsByTagName("a");
+                 a[0].removeAttribute("style","color");
+
+
+                  }
+                    }
+
+           }
+
+           function contact(){
+
+               debugger;
+
+               var home=document.getElementsByClassName("HeaderMenu");
+               var det=home[0].getElementsByTagName("li");
+
+               var shoping_list=document.getElementById("DivShoppingList");
+               shoping_list.setAttribute("class","hideBox");
+
+              for(var i=0;i<det.length;i++){
+
+                if(i==7)
+                 {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+                 }
+                else{
+
+                 det[i].removeAttribute("class","liClick");
+                 var a=det[i].getElementsByTagName("a");
+                 a[0].removeAttribute("style","color");
+
+
+                  }
+                    }
+
+              }
+
+           function new_item(){
+
+
+            debugger;
+
+            var home=document.getElementsByClassName("HeaderMenu");
+            var det=home[0].getElementsByTagName("li");
+
+            var shoping_list=document.getElementById("DivShoppingList");
+            shoping_list.setAttribute("class","hideBox");
+
+            for(var i=0;i<det.length;i++){
+
+                if(i==8)
+                 {
+                det[i].setAttribute("class","liClick");
+                var a=det[i].getElementsByTagName("a");
+                a[0].setAttribute("style","color");
+                a[0].style.color="white";
+
+                 }
+                else{
+
+                 det[i].removeAttribute("class","liClick");
+                 var a=det[i].getElementsByTagName("a");
+                 a[0].removeAttribute("style","color");
+
+
+                  }
+                    }
+           }  
+           
+           function add_to_list_1(){
+
+            debugger;
+
+              var shoping_list=document.getElementById("DivShoppingList");
+              shoping_list.setAttribute("class","showBox")
+
+              var tr1=document.createElement("tr");
+              tr1.setAttribute("class","Electronic");
+              var td1 =document.createElement("td");
+              var input=document.createElement("input");
+              input.setAttribute("type","checkbox");
+              td1.setAttribute("class","tdCheckbox");
+              td1.appendChild(input);
+              
+              var td2=document.createElement("td");
+              var image=document.createElement("img")
+              image.setAttribute("width","50px");
+              image.src="Images/Items/Camera_Elec (2).png";
+              td2.appendChild(image);
+
+              debugger;
+
+              var td3=document.createElement("td");
+              var item=document.getElementsByClassName("headerItem");
+              var item_v=item[0].innerText;
+              var item_value=document.createTextNode(item_v);
+              td3.appendChild(item_value);
+              debugger;
+              var td4=document.createElement("td");
+              var item1=document.getElementsByClassName("headerpriceItem");
+              var item_v1=item1[0].innerText;
+              var item_value1=document.createTextNode(item_v1);
+              td4.appendChild(item_value1);
+              
+
+              tr1.appendChild(td1);
+              tr1.appendChild(td2);
+              tr1.appendChild(td3);
+              tr1.appendChild(td4);
+
+
+              var table=document.getElementById("tableItems");
+              table.appendChild(tr1);
+
+
+           }
+
+           function add_to_list_2(){
+
+              debugger;
+
+              var shoping_list=document.getElementById("DivShoppingList");
+              shoping_list.setAttribute("class","showBox")
+
+              var tr1=document.createElement("tr");
+              tr1.setAttribute("class","Perfume"); 
+              var td1 =document.createElement("td");
+              td1.setAttribute("class","tdCheckbox");
+              var input=document.createElement("input");
+              input.setAttribute("type","checkbox")
+              td1.appendChild(input);
+  
+              var td2=document.createElement("td");
+              var image=document.createElement("img")
+              image.setAttribute("width","50px");
+              image.src="Images/Items/Perfume_Fashion (2).png";
+              td2.appendChild(image);
+
+               debugger;
+
+              var td3=document.createElement("td");
+              var item=document.getElementsByClassName("headerItem");
+              var item_v=item[1].innerText;
+              var item_value=document.createTextNode(item_v);
+              td3.appendChild(item_value);
+
+              var td4=document.createElement("td");
+              var item1=document.getElementsByClassName("headerpriceItem");
+              var item_v1=item1[1].innerText;
+              var item_value1=document.createTextNode(item_v1);
+              td4.appendChild(item_value1);
+
+               tr1.appendChild(td1);
+               tr1.appendChild(td2);
+               tr1.appendChild(td3);
+               tr1.appendChild(td4);
+
+
+              var table=document.getElementById("tableItems");
+              table.appendChild(tr1);
+
+
+             }
+
+
+            function add_to_list_3(){
+
+             debugger;
+
+             var shoping_list=document.getElementById("DivShoppingList");
+             shoping_list.setAttribute("class","showBox")
+
+              var tr1=document.createElement("tr");
+              tr1.setAttribute("class","Electronic"); 
+              var td1 =document.createElement("td");
+              td1.setAttribute("class","tdCheckbox");
+              var input=document.createElement("input");
+              input.setAttribute("type","checkbox")
+              td1.appendChild(input);
+  
+              var td2=document.createElement("td");
+              var image=document.createElement("img")
+              image.setAttribute("width","50px");
+              image.src="Images/Items/TV (2).png";
+              td2.appendChild(image);
+
+             debugger;
+
+              var td3=document.createElement("td");
+              var item=document.getElementsByClassName("headerItem");
+              var item_v=item[2].innerText;
+              var item_value=document.createTextNode(item_v);
+              td3.appendChild(item_value);
+
+              var td4=document.createElement("td");
+              var item1=document.getElementsByClassName("headerpriceItem");
+              var item_v1=item1[2].innerText;
+              var item_value1=document.createTextNode(item_v1);
+              td4.appendChild(item_value1);
+  
+
+              tr1.appendChild(td1);
+              tr1.appendChild(td2);
+              tr1.appendChild(td3);
+              tr1.appendChild(td4);
+
+
+              var table=document.getElementById("tableItems");
+              table.appendChild(tr1);
+                
+            }
+
+
+             function add_to_list_4(){
+
+              debugger;
+
+              var shoping_list=document.getElementById("DivShoppingList");
+              shoping_list.setAttribute("class","showBox")
+
+              var tr1=document.createElement("tr");
+              tr1.setAttribute("class","Perfume");
+              var td1 =document.createElement("td");
+              td1.setAttribute("class","tdCheckbox");
+              var input=document.createElement("input");
+              input.setAttribute("type","checkbox")
+              td1.appendChild(input);
+  
+               var td2=document.createElement("td");
+               var image=document.createElement("img")
+               image.setAttribute("width","50px");
+               image.src="Images/Items/Adidas_Perfume (2).png";
+               td2.appendChild(image);
+
+              debugger;
+
+               var td3=document.createElement("td");
+               var item=document.getElementsByClassName("headerItem");
+               var item_v=item[3].innerText;
+               var item_value=document.createTextNode(item_v);
+               td3.appendChild(item_value);
+
+               var td4=document.createElement("td");
+              var item1=document.getElementsByClassName("headerpriceItem");
+              var item_v1=item1[3].innerText;
+              var item_value1=document.createTextNode(item_v1);
+              td4.appendChild(item_value1);
+  
+
+               tr1.appendChild(td1);
+               tr1.appendChild(td2);
+               tr1.appendChild(td3);
+               tr1.appendChild(td4);
+
+
+              var table=document.getElementById("tableItems");
+              table.appendChild(tr1);
+
+
+             }
+
+
+           function add_to_list_5(){
+
+            debugger;
+
+           var shoping_list=document.getElementById("DivShoppingList");
+           shoping_list.setAttribute("class","showBox")
+
+           var tr1=document.createElement("tr");
+           tr1.setAttribute("class","Electronic");
+           var td1 =document.createElement("td");
+           td1.setAttribute("class","tdCheckbox");
+           var input=document.createElement("input");
+           input.setAttribute("type","checkbox")
+           td1.appendChild(input);
+  
+           var td2=document.createElement("td");
+           var image=document.createElement("img")
+           image.setAttribute("width","50px");
+           image.src="Images/Items/PS4_Elec (2).png";
+           td2.appendChild(image);
+
+            debugger;
+
+            var td3=document.createElement("td");
+            var item=document.getElementsByClassName("headerItem");
+            var item_v=item[4].innerText;
+            var item_value=document.createTextNode(item_v);
+            td3.appendChild(item_value);
+
+            var td4=document.createElement("td");
+              var item1=document.getElementsByClassName("headerpriceItem");
+              var item_v1=item1[4].innerText;
+              var item_value1=document.createTextNode(item_v1);
+              td4.appendChild(item_value1);
+  
+
+             tr1.appendChild(td1);
+             tr1.appendChild(td2);
+             tr1.appendChild(td3);
+             tr1.appendChild(td4);
+
+
+             var table=document.getElementById("tableItems");
+             table.appendChild(tr1);
+
+
+              }
+
+
+
+          function distype(){
+            debugger;
+
+            var dis=document.getElementById("txtDiscount").value;
+            var table= document.getElementById("tableItems");
+               var tr1=table.getElementsByTagName("tr");
+            var x= dis.substr(0,2);
+            var y=dis.substr(2,2);
+           
+
+            switch (x) {
+             case "EL":
+           
+               
+               for(var i=0;i<tr1.length;i++){
+                   if(tr1[i].classList.contains("Electronic")){
+
+                       var td3=tr1[i].getElementsByTagName("td");
+                       var td3_value=td3[3].innerText;
+                       var price=td3_value.substr(0,3);
+                       
+                       var dis_value=100-y;
+                       var dis_per=dis_value/100;
+                       var final_dis=dis_per*price;
+                       td3[3].innerText=final_dis+"JD";
+                
+
+                   }
+                   
+                   
+               }
+            
+               
+              break;
+
+             case "PR":
+            
+               
+               for(var i=0;i<tr1.length;i++){
+                   if(tr1[i].classList.contains("Perfume")){
+
+                       var td3=tr1[i].getElementsByTagName("td");
+                       var td3_value=td3[3].innerText;
+                       var price=td3_value.substr(0,3);
+                       
+                       var dis_value=100-y;
+                       var dis_per=dis_value/100;
+                       var final_dis=dis_per*price;
+                       td3[3].innerText=final_dis+"JD";
+                
+
+                   }
+                   
+                   
+               }
+           
+              
+                break;
+
+              default:
+             text = "No item have this discount code";
+               }
+
+            
+           }
+
+
+           function out(){
+
+            window.location="Login.html";
+
+          }
+        
+        </script>
+    </head>
+    <body onload="hello()">
+        
+        <div class="header">
+    
+            <div class="logo float-left">
+                <img src="Images/Header/SmallLogo.png" />
+            </div>
+            <div style="float: left; margin-left: 1120px; margin-top: 25px; font-weight: bold;">
+                <span id="username">Hello</span>
+                <img src="Images/Icons/logout.png" style="margin-left:5px;cursor:pointer" onclick="out()" />
+            </div>
+            <div class="account float-right">
+                <div class="accountSettings">
+                    <div class="ImageCircle">
+                        <img src="Images/Header/ProfilePict.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div id="DivShoppingList" class="hideBox" style=" position: absolute; height: 130%; border-right: 2px solid white; background: #333333; width: 270px;">
+            <div style="width: 206px;text-align: center;padding-top: 15px;float: left;">
+                <span style="font-size: 20px; font-weight: bold; font-family: sans-serif; color: white; ">
+                    <input type="checkbox" onclick="shopping_list(this)"> Shopping List
+                </span>
+            </div>
+            <div style="float: left;margin-top: 10px;">
+                <img src="Images/Icons/delete.png" width="30" id="imgDelete" onclick="delete_checked()" >
+            </div>
+            <div id="divItemList" style="height: 500px; padding-left: 15px; padding-right: 15px; color: white; margin-top: 10px; padding-left: 15px;">
+                <table id="tableItems" style="padding-left:10px;"></table>
+            </div>
+            <div style="padding-left: 15px;">
+                <div style=" margin-left: 3px; color: white; margin-bottom: 10px;">
+                    <input type="checkbox" id="chkDiscount" onclick="discount(this)" /> You Have Discount?
+                </div>
+                <div id="DiscountPart" style="display:none;">
+                    <div>
+                        <input type="text" id="txtDiscount" placeholder="Discount Code" style="width: 205px;padding-left: 10px;" />
+                    </div>
+                    <div style="margin-top:10px;color:white;" >
+                        <input type="button" class="mybutton" value="Buy" style="width:85%" onmouseover="buyover()" onclick="distype()"  />
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div id="HeaderBoxes">
+            <div class="HeaderBoxImage">
+                <img src="Images/Header/Box1.png" />
+            </div>
+            <div class="HeaderBox">
+                <div style="position: absolute; margin-left: 240px;">
+                    <img src="Images/Header/Box2.png" />
+                </div>
+                <div id="HeaderTitle" style="float:left">
+                    <span class="title" style="color: #D30294;">
+                        Dare
+                    </span>
+                    <span class="title">
+                        Academy
+                    </span>
+                </div>
+                <div id="CallUs">
+                    <span style="font-weight:bold" class="contact">
+                        CALL US
+                    </span>
+                    <span style="color: #D30294; margin-left: 7px; font-weight: bold;" class="contact">
+                        06 516 2571
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+       
+        
+        <div class="HeaderMenu">
+            <ul>
+                <li class="liClick">
+
+                   
+                    <a href="#" style="color:white" onclick="home()">Home</a>
+                </li>
+                <li><a href="#" onclick="top_sales()">Top Sales</a></li>
+                <li><a href="#" onclick="week_offers()">Week Offers</a></li>
+                <li>
+                    <a href="#" onclick="shope()">Shop By Category</a>
+                    <ul style="display:none;">
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Cars</a></li>
+                        <li><a href="#">Electronics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="contact()">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#" onclick="new_item()">New Items</a>
+                </li>
+            </ul>
+        </div>
+    
+      
+        
+        
+        
+        
+        
+        
+        <div class="SellingArea">
+            <div class="Item" id="ItemNumber">
+                <span class="Electronic"></span>
+                <img src="Images/Items/Camera_Elec.png" width="130" class="mainimgItem" />
+                <div class="ItemSpec">
+                    <span class="headerItem">Camera Nikon</span>
+                    <span class="itemDetails">
+                        Nikon D850 DSLR Camera with AF-S NIKKOR 24-120mm...
+                    </span>
+    
+                    <div class="PriceSection">
+                        <div style=" padding-top: 5px; float: left;">
+                            <span class="headerpriceItem">300 JD</span>
+                        </div>
+                        <div style="float:left;margin-left:10px">
+                            <img src="Images/Icons/AddtoCart.png" width="30" class="imgAdd" onclick="add_to_list_1()" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="Images/Menu/hiddenShadow.png" width="260"  />
+                </div>
+            </div>
+    
+    
+    
+            <div class="Item">
+                <span class="Perfume"></span>
+                <img src="Images/Items/Perfume_Fashion.png" width="90" class="mainimgItem" style="margin-left:55px;" />
+                <div class="ItemSpec">
+                    <div style="position:absolute">
+                        <img src="Images/Menu/hiddenBox.png" width="270" />
+                    </div>
+                    <span class="headerItem">Perfume Fashion</span>
+                    <span class="itemDetails">Luxury Perfume Fashion for women...</span>
+                    <div class="PriceSection">
+                        <div style=" padding-top: 5px; float: left;">
+                            <span class="headerpriceItem">90 JD</span>
+                        </div>
+                        <div style="float:left;margin-left:10px">
+
+                            <img src="Images/Icons/AddtoCart.png" width="30" class="imgAdd" onclick="add_to_list_2()"  />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="Images/Menu/hiddenShadow.png" width="260" />
+                </div>
+            </div>
+    
+    
+            <div class="Item">
+                <span class="Electronic"></span>
+                <img src="Images/Items/TV.png" width="140" class="mainimgItem" />
+                <div class="ItemSpec">
+                    <div style="position:absolute">
+                        <img src="Images/Menu/hiddenBox.png" width="217" />
+                    </div>
+                    <span class="headerItem">Samsung TV</span>
+                    <div class="itemDetails">
+                        <span>
+                            Samsung TV LED Curved
+                        </span>
+                    </div>
+                    <div class="PriceSection">
+                        <div style=" padding-top: 5px; float: left;">
+                            <span class="headerpriceItem">500 JD</span>
+                        </div>
+                        <div style="float:left;margin-left:10px">
+                            <img src="Images/Icons/AddtoCart.png" width="30" class="imgAdd" onclick="add_to_list_3()" />
+                        </div>
+                    </div>
+    
+                </div>
+                <div>
+                    <img src="Images/Menu/hiddenShadow.png" width="260" />
+                </div>
+            </div>
+    
+    
+            <div class="Item">
+                <span class="Perfume"></span>
+                <img src="Images/Items/Adidas_Perfume.png" width="180" height="120" class="mainimgItem"/>
+                <div class="ItemSpec">
+                    <div style="position:absolute">
+                        <img src="Images/Menu/hiddenBox.png" width="217" />
+                    </div>
+                    <span class="headerItem">Adidas Perfume</span>
+                    <div class="itemDetails">
+                        <span>
+                            Adidas Perfume
+                        </span>
+                    </div>
+                    <div class="PriceSection">
+                        <div style=" padding-top: 5px; float: left;">
+                            <span class="headerpriceItem">70 JD</span>
+                        </div>
+                        <div style="float:left;margin-left:10px">
+                            
+                            <img src="Images/Icons/AddtoCart.png" width="30" class="imgAdd" onclick="add_to_list_4()"  />
+                        </div>
+                    </div>
+    
+                </div>
+                <div>
+                    <img src="Images/Menu/hiddenShadow.png" width="260" />
+                </div>
+            </div>
+    
+    
+            <div class="Item">
+                <span class="Electronic"></span>
+                <img src="Images/Items/PS4_Elec.png" width="210" class="mainimgItem" />
+                <div class="ItemSpec">
+                    <div style="position:absolute">
+                        <img src="Images/Menu/hiddenBox.png" width="217" />
+                    </div>
+                    <span class="headerItem">PS4</span>
+                    <div class="itemDetails">
+                        <span>
+                            PlayStation PS4 1TB
+                        </span>
+                    </div>
+                    <div class="PriceSection">
+                        <div style=" padding-top: 5px; float: left;">
+                            <span class="headerpriceItem">120 JD</span>
+                        </div>
+                        <div style="float:left;margin-left:10px">
+                            <img src="Images/Icons/AddtoCart.png" width="30" class="imgAdd" onclick="add_to_list_5()" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="Images/Menu/hiddenShadow.png" width="260" />
+                </div>
+            </div>
+        </div>
+    
+    </body>
+</html>

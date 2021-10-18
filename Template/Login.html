@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Login</title>
+        
+        <link href="loginstyle.css" rel="stylesheet" type="text/css" />
+    
+    
+        <script type="text/javascript">
+       
+        function hide(){
+            var error= document.getElementById("showmsg");
+            error.setAttribute("class","hideBox");
+
+
+        }
+        
+        function login(){
+            debugger;
+
+            
+            var error= document.getElementById("showmsg");
+
+
+            var username_value=document.getElementById("txtUsername").value;
+            var username_real=document.createTextNode(username_value);
+
+            var password_value=document.getElementById("txtPassword").value;
+            var password_real=document.createTextNode(password_value);
+
+
+            if(password_value==''||username_value==''){
+               
+               error.setAttribute("class","showBox");
+            } 
+            else{
+               
+                    localStorage.setItem("Info",username_value);
+               window.location="home.html";
+            }
+            
+
+
+        }
+
+        function onfo(x){
+            debugger;
+
+            
+           x.setAttribute("class","inputBox");
+       }
+       
+        
+        
+        
+        </script>
+
+    </head>
+    <body>
+
+        <div class="box">
+            <h2>Login</h2>
+            <form>
+                <div class="inputBox">
+                    <label>Username</label>
+    
+                    <input type="text" id="txtUsername" onfouse="onfo(this)" />
+                </div>
+                <div class="inputBox">
+                    <label>Password</label>
+    
+                    <input type="password" id="txtPassword" onfouse="onfo(this)" />
+                </div>
+                <input type="button" value="Sign In" onclick="login()"  />
+            </form>
+            <div class="hideBox" id="showmsg">
+                <label>Please Enter Username & Password</label>
+                <img src="Images/Icons/Close.png" width="20" onclick="hide()"  />
+            </div>
+        </div>
+
+    </body>
+</html>
+
